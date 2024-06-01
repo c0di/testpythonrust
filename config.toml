@@ -10,4 +10,4 @@ highlight_code = true
 
 [extra]
 logo_text = "A Pythonista Learning Rust"
-logo_home_link = "/"
+logo_home_link = "/rust-blog"
