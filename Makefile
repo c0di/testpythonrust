@@ -1,4 +1,4 @@
-.PHONY: build serve clean
+.PHONY: build serve dev clean
 
 build:
 	zola build
@@ -11,4 +11,3 @@ dev:
 
 clean:
 	rm -rf public
-
