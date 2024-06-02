@@ -11,3 +11,12 @@ highlight_code = true
 [extra]
 logo_text = "A Pythonista Learning Rust"
 logo_home_link = "/rust-blog"
+
+# Whether to show links to earlier and later posts
+# on each post page (defaults to true).
+enable_post_view_navigation = true
+
+# The text shown at the bottom of a post,
+# before earlier/later post links.
+# Defaults to "Thanks for reading! Read other posts?"
+post_view_navigation_prompt = "Read more"
