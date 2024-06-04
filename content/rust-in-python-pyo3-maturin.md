@@ -9,7 +9,8 @@ PyO3 is a Rust library for building Python bindings and Maturin is a tool for bu
 
 Here is a quick overview of the steps we will follow:
 
-![overview mind map of how PyO3 and Maturin work to run Rust code in Python](rust-blog/rust-in-python.png)
+{{ image(src="/rust-in-python.png", alt="overview mind map of how PyO3 and Maturin work to run Rust code in Python",
+         style="border-radius: 8px;") }}
 
 Let's do a quick demo to see how it works.
 
