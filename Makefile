@@ -1,4 +1,4 @@
-.PHONY: build serve dev clean
+.PHONY: build serve dev clean checkout-theme
 
 build:
 	zola build
@@ -11,3 +11,6 @@ dev:
 
 clean:
 	rm -rf public
+
+checkout-theme:
+	git submodule update --init
