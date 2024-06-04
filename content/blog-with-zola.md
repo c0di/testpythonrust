@@ -44,7 +44,7 @@ logo_home_link = "/rust-blog"
 
 - `base_url` is important for the theme to work correctly (I had https://example.com before and the theme styles were not applied)
 - `theme` is the name of the theme folder in `themes/`
-- I think `compile_sass` needs to be `true` for the theme to work
+- `compile_sass` - Sass compilation is required (see [theme docs](https://github.com/pawroman/zola-theme-terminimal))
 - the `logo_text` and `logo_home_link` are specific to the theme I use
 
 ## Writing
@@ -182,13 +182,7 @@ I thought this would work:
 
 Having the image in my `static/` folder, but it didn't show up on the live site.
 
-I played with the path making it relative and absolute, but in the end, I had to use the `image()` shortcode from the theme:
-
-```
-{{ image(src="/rust-in-python.png", alt="overview mind map of how PyO3 and Maturin work to run Rust code in Python", style="border-radius: 8px;") }}
-```
-
-So keep that in mind, check out theme documentation or source code if you run into issues with static files!
+I played with the path making it relative and absolute, but in the end, I had to use the `image()` shortcode with the `src` attribute pointing to the image in the `static/` folder (just the file name, not the full path). See [theme docs](https://github.com/pawroman/zola-theme-terminimal?tab=readme-ov-file#shortcodes) as well.
 
 ## Conclusion
 
