@@ -172,7 +172,7 @@ One thing you'd need to do to make your site work with a custom domain is to set
 
 ## Conclusion
 
-Zola is a great SSG so far, I am happy with the setup. I like the simplicity of the tool and the speed of the generated site (Rust 📈) and automatic deployment with GitHub Actions. 😍
+Zola is a great SSG so far, I am happy with the setup. I like the simplicity of the tool and the speed of the generated site (Rust 📈 -> `zola build` -> `Done in 91ms.` for me) and automatic deployment with GitHub Actions. 😍
 
 If you're looking for a Rust based SSG solution I hope this post will help you with the setup.
 
