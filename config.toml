@@ -20,3 +20,7 @@ enable_post_view_navigation = true
 # before earlier/later post links.
 # Defaults to "Thanks for reading! Read other posts?"
 post_view_navigation_prompt = "Read more"
+
+# - "combined" -- combine like so: "page_title | main_title",
+#                 or if page_title is not defined or empty, fall back to `main_title`
+page_titles = "combined"
