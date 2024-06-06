@@ -210,6 +210,4 @@ I played with the path making it relative and absolute, but in the end, I had to
 
 Zola is a great SSG so far, I am happy with the setup. I like the simplicity of the tool and the speed of the generated site (Rust 📈 -> `zola build` -> `Done in 91ms.` for me) and automatic deployment with GitHub Actions. 😍
 
-If you're looking for a Rust based SSG solution I hope this post will help you with the setup.
-
-If you have any questions, reach out to me on X [@bbelderbos](https://x.com/bbelderbos).
+If you're looking for a Rust based SSG solution I hope this post will help you with the setup. 📈

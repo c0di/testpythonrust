@@ -203,5 +203,4 @@ There is a lot more to learn about PyO3 and Maturin, and Rust in general.
 
 Check out the [PyO3 documentation](https://pyo3.rs/v0.21.2/) and the [Maturin documentation](https://github.com/PyO3/maturin) for more information.
 
----
-What Python point will you be improving with Rust? Let me know on X [@bbelderbos](https://twitter.com/bbelderbos).
+What Python code do you want to speed up with Rust?
