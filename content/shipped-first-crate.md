@@ -1,7 +1,6 @@
 +++
 title = "How to ship code to crates.io and automate it with GitHub Actions"
 date = 2024-06-06
-draft = true
 +++
 
 In the previous post, I made a little Rust script to search Pybites content. In this post I share how I deployed this _crate_ (the Rust term for a package) to crates.io (the Rust package index). 🎉
