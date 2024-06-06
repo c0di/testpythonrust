@@ -4,6 +4,8 @@ description = "Documenting the journey of a Pythonista learning Rust with bite-s
 theme = "terminimal"
 compile_sass = true
 build_search_index = false
+generate_feed = true
+feed_filename = "atom.xml"
 
 [markdown]
 highlight_code = true
@@ -11,6 +13,7 @@ highlight_code = true
 [extra]
 logo_text = "A Pythonista Learning Rust"
 logo_home_link = "/rust-blog"
+author = "Bob Belderbos"
 
 # Whether to show links to earlier and later posts
 # on each post page (defaults to true).

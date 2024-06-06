@@ -168,7 +168,9 @@ base_url = "https://bobbelderbos.com/rust-blog"
 
 I need to figure out how to use a custom domain for this blog but that's for later concern.
 
-One thing you'd need to do to make your site work with a custom domain is to set up a `CNAME` file in the `public` folder with the domain name.
+You'll need to put your domain in a `CNAME` file and place it in your `static/` folder, see docs:
+
+> If you're using a custom domain for your GitHub Pages site, put the CNAME in static/CNAME so that Zola puts it in the root of the public folder which is where GitHub expects it to be.
 
 ## Static files
 
