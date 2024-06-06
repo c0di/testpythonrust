@@ -9,4 +9,4 @@ make checkout-theme
 # build and serve blog
 make dev
 ```
-For more details on Zola and my setup see [this blog post](https://bobbelderbos.com/rust-blog/blog-with-zola/)
+For more details on Zola and my setup see [this blog post](https://apythonistalearningrust.com/blog-with-zola/)

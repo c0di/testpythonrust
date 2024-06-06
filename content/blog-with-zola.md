@@ -27,7 +27,7 @@ Maybe something more but these were the main steps.
 This is my `config.toml` so far:
 
 ```toml
-base_url = "https://bobbelderbos.com/rust-blog"
+base_url = "https://apythonistalearningrust.com"
 title = "A Pythonista Learning Rust"
 description = "Documenting the journey of a Pythonista learning Rust with bite-sized posts."
 theme = "terminimal"
@@ -39,7 +39,7 @@ highlight_code = true
 
 [extra]
 logo_text = "A Pythonista Learning Rust"
-logo_home_link = "/rust-blog"
+logo_home_link = "/"
 ```
 
 - `base_url` is important for the theme to work correctly (I had https://example.com before and the theme styles were not applied)
@@ -163,10 +163,8 @@ This workflow will build the site and push the changes to the `gh-pages` branch 
 I found out that my main GitHub pages username site was already using a custom domain, so this new blog redirects to a subfolder on that domain, see setting:
 
 ```toml
-base_url = "https://bobbelderbos.com/rust-blog"
+base_url = "https://apythonistalearningrust.com"
 ```
-
-I need to figure out how to use a custom domain for this blog but that's for later concern.
 
 You'll need to put your domain in a `CNAME` file and place it in your `static/` folder, see docs:
 

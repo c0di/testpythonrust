@@ -1,4 +1,4 @@
-base_url = "https://bobbelderbos.com/rust-blog"
+base_url = "https://apythonistalearningrust.com"
 title = "A Pythonista Learning Rust"
 description = "Documenting the journey of a Pythonista learning Rust with bite-sized posts."
 theme = "terminimal"
@@ -12,7 +12,7 @@ highlight_code = true
 
 [extra]
 logo_text = "A Pythonista Learning Rust"
-logo_home_link = "/rust-blog"
+logo_home_link = "/"
 author = "Bob Belderbos"
 
 # Whether to show links to earlier and later posts
