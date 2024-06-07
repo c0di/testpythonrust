@@ -1,5 +1,5 @@
 +++
-title = "Enhancing Pybites Search with serde_json Caching (Part II)"
+title = "Enhancing Pybites Search caching using serde_json"
 date = 2024-06-07
 +++
 
