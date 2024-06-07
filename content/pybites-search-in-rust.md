@@ -99,7 +99,7 @@ Plus I feel I learned a lot in the process, a lot faster by just consuming tutor
 ## Some things I learned
 
 - How to make requests with `reqwest` (and `tokio` for async requests)
-- How to cache requests with `cached`
+- How to cache requests with `cached` (note that this is a simple in-memory cache so it turned out to not be that useful for this script, in a later revision I added manual memoization, see [this post](/pybites-search-caching-serde-json))
 - How to use `serde` to deserialize JSON
 - Handle command line arguments
 - Use `regex` to search for a term in a string
@@ -139,7 +139,7 @@ path = "src/main.rs"
 
 ## Compiling and running the script
 
-```terminal
+```bash
 √ search (main) $ cargo build --release
 ...
 ...
