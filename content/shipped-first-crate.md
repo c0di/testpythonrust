@@ -28,7 +28,7 @@ $ cargo publish
 note: waiting for `pybites-search v0.1.0` to be available at registry `crates-io`.
 You may press ctrl-c to skip waiting; the crate should be available shortly.
    Published pybites-search v0.1.0 at registry `crates-io`
-...
+```
 
 It takes the version from your `Cargo.toml` file. If you want to publish a new version, you need to update this file.
 
@@ -119,6 +119,8 @@ This workflow triggers on a tag push, so you can tag your releases with `vX.Y.Z`
 - Tag your release with `vX.Y.Z` and push it to GitHub: `git tag v0.2.0 && git push --tags`
 
 Also note that you'll need the `CARGO_REGISTRY_TOKEN` secret for this workflow to work. You can add this in your GitHub repository settings under `Settings` -> `Secrets` -> `New repository secret`. 🤫
+
+[Job run example](https://github.com/bbelderbos/pybites-search/actions/runs/9388676698/job/25854404928).
 
 ---
 
