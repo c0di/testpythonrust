@@ -51,5 +51,3 @@ I think it's mainly because I don't have to deal with virtual environments in Ru
 This post was just to quickly compare Cargo and Poetry and show you how similar they are. I hope you found it helpful! 😊
 
 I am sure I will do more in-depth posts on Cargo in the future. Stay tuned! 🚀
-
-Hit me up on X [@bbelderbos](https://x.com/bbelderbos) if you have any questions or feedback! 👋

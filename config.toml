@@ -22,7 +22,7 @@ enable_post_view_navigation = true
 # The text shown at the bottom of a post,
 # before earlier/later post links.
 # Defaults to "Thanks for reading! Read other posts?"
-post_view_navigation_prompt = "Read more"
+post_view_navigation_prompt = "Thanks for reading! Reach out to me on X | LinkedIn: @bbelderbos"
 
 # - "combined" -- combine like so: "page_title | main_title",
 #                 or if page_title is not defined or empty, fall back to `main_title`

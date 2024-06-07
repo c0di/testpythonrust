@@ -24,7 +24,7 @@ Maybe something more but these were the main steps.
 
 ## Configuration
 
-This is my `config.toml` so far:
+This is my `config.toml`:
 
 ```toml
 base_url = "https://apythonistalearningrust.com"
@@ -33,6 +33,8 @@ description = "Documenting the journey of a Pythonista learning Rust with bite-s
 theme = "terminimal"
 compile_sass = true
 build_search_index = false
+generate_feed = true
+feed_filename = "atom.xml"
 
 [markdown]
 highlight_code = true
@@ -40,12 +42,26 @@ highlight_code = true
 [extra]
 logo_text = "A Pythonista Learning Rust"
 logo_home_link = "/"
+author = "Bob Belderbos"
+
+# Whether to show links to earlier and later posts
+# on each post page (defaults to true).
+enable_post_view_navigation = true
+
+# The text shown at the bottom of a post,
+# before earlier/later post links.
+# Defaults to "Thanks for reading! Read other posts?"
+post_view_navigation_prompt = "Read more"
+
+# - "combined" -- combine like so: "page_title | main_title",
+#                 or if page_title is not defined or empty, fall back to `main_title`
+page_titles = "combined"
 ```
 
-- `base_url` is important for the theme to work correctly (I had https://example.com before and the theme styles were not applied)
+- `base_url` is important for the theme to work correctly (I forgot to update https://example.com at the start and it broke the theme's styling)
 - `theme` is the name of the theme folder in `themes/`
 - `compile_sass` - Sass compilation is required (see [theme docs](https://github.com/pawroman/zola-theme-terminimal))
-- the `logo_text` and `logo_home_link` are specific to the theme I use
+- the settings under `[extra]` are theme specific.
 
 ## Writing
 
@@ -60,9 +76,9 @@ date = 2024-06-02
 +++
 ```
 
-Later I can add tags, categories, etc.
+If you want to add more metadata, you can add it in this front matter block. If you don't want to publish the post yet, you can add `draft = true` for example.
 
-Then write the content in markdown below this front matter block.
+Then write the content in markdown beneath this block.
 
 To make a new post I made a quick shell script:
 
@@ -109,7 +125,7 @@ zola serve
 For convenience I made a Makefile with some aliases including a combined `dev` command:
 
 ```makefile
-.PHONY: build serve dev clean
+.PHONY: build serve dev clean checkout-theme
 
 build:
 	zola build
@@ -122,7 +138,12 @@ dev:
 
 clean:
 	rm -rf public
+
+checkout-theme:
+	git submodule update --init
 ```
+
+`checkout-theme` I added later when I git clone'd this repo on a new machine and detected that the theme repo was not cloned automatically.
 
 ## Deployment
 
@@ -160,15 +181,16 @@ This workflow will build the site and push the changes to the `gh-pages` branch 
 
 ## Custom domain
 
-I found out that my main GitHub pages username site was already using a custom domain, so this new blog redirects to a subfolder on that domain, see setting:
+Apart from mentioned `base_url` in the `config.toml`, you also need to add a `CNAME` file in the `static/` folder with the domain you want to use, e.g.:
 
-```toml
-base_url = "https://apythonistalearningrust.com"
+```bash
+$ cat static/CNAME
+apythonistalearningrust.com
 ```
 
-You'll need to put your domain in a `CNAME` file and place it in your `static/` folder, see docs:
+Then under the repo's Settings > GitHub Pages, you can add the custom domain. You can also turn on HTTPS there.
 
-> If you're using a custom domain for your GitHub Pages site, put the CNAME in static/CNAME so that Zola puts it in the root of the public folder which is where GitHub expects it to be.
+Lastly you need to update your DNS settings of your domain provider to point to GitHub's IP addresses, see [GitHub's docs](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
 
 ## Static files
 
@@ -188,6 +210,4 @@ I played with the path making it relative and absolute, but in the end, I had to
 
 Zola is a great SSG so far, I am happy with the setup. I like the simplicity of the tool and the speed of the generated site (Rust 📈 -> `zola build` -> `Done in 91ms.` for me) and automatic deployment with GitHub Actions. 😍
 
-If you're looking for a Rust based SSG solution I hope this post will help you with the setup.
-
-If you have any questions, reach out to me on X [@bbelderbos](https://x.com/bbelderbos).
+If you're looking for a Rust based SSG solution I hope this post will help you with the setup. 📈
