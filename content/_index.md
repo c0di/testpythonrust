@@ -1,7 +1,5 @@
 +++
-# number of pages to paginate by
-paginate_by = 2
-
-# sorting order for pagination
+paginate_by = 5
 sort_by = "date"
 +++
+

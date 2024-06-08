@@ -22,8 +22,24 @@ enable_post_view_navigation = true
 # The text shown at the bottom of a post,
 # before earlier/later post links.
 # Defaults to "Thanks for reading! Read other posts?"
-post_view_navigation_prompt = "Thanks for reading! Reach out to me on X | LinkedIn: @bbelderbos"
+post_view_navigation_prompt = "Thanks for reading! Reach out to me on X | Fosstodon | LinkedIn: @bbelderbos"
 
 # - "combined" -- combine like so: "page_title | main_title",
 #                 or if page_title is not defined or empty, fall back to `main_title`
 page_titles = "combined"
+
+menu_items = [
+    # each of these is optional, name and url are required
+    # $BASE_URL is going to be substituted by base_url from configuration
+    {name = "Home", url = "$BASE_URL"},
+    # tags should only be enabled if you have "tags" taxonomy
+    # for later ...
+    # {name = "tags", url = "$BASE_URL/tags"},
+    {name = "Archive", url = "$BASE_URL/pages/archive"},
+    {name = "About", url = "$BASE_URL/pages/about"},
+    {name = "GitHub", url = "https://github.com/bbelderbos", newtab = true},
+    {name = "Pybites", url = "https://pybit.es", newtab = true},
+]
+
+exclude_from_feed = ["pages"]
+
