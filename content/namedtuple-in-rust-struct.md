@@ -139,15 +139,6 @@ struct Person {
 }
 
 impl Person {
-    // Method to create a new Person
-    fn new(name: &str, age: u32, email: &str) -> Person {
-        Person {
-            name: String::from(name),
-            age,
-            email: String::from(email),
-        }
-    }
-
     // Method to display a greeting
     fn greet(&self) {
         println!("Hello, my name is {} and I am {} years old. You can contact me at {}", self.name, self.age, self.email);
@@ -155,7 +146,12 @@ impl Person {
 }
 
 fn main() {
-    let person = Person::new("John", 30, "john@example.com");
+    let person = Person {
+        name: String::from("John"),
+        age: 30,
+        email: String::from("john@example.com"),
+    };
+
     person.greet();
 }
 ```
@@ -166,9 +162,11 @@ Which prints:
 Hello, my name is John and I am 30 years old. You can contact me at john@example.com
 ```
 
-`greet(&self)` means that this method takes a reference to the `struct` as an argument. This is similar to the `self` parameter in Python methods.
+In Rust, you can enhance your structs by implementing methods using the `impl` block. This allows you to define functions that operate on instances of your struct, providing a cleaner and more encapsulated way to manage data + associated behaviors (think properties and methods in Python classes).
 
-_Ownership_ and _borrowing_ are big and important concepts in Rust, and I'll cover them here more in detail when I have a better understanding of them ...
+The `greet(&self)` method is an instance method that takes an immutable reference to the struct (= `&self`), similar to how Python methods take `self` as their first parameter. This method simply prints a greeting using the `struct`'s fields.
+
+The _reference_ part here touches upon the concept of _ownership_ and _borrowing_ in Rust. _Ownership_ is a big and important concept in Rust, and I'll cover it here more in detail when I have a better understanding of it ...
 
 ## Conclusion
 
