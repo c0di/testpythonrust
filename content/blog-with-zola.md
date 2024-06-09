@@ -179,19 +179,6 @@ This workflow will build the site and push the changes to the `gh-pages` branch 
 
 - I also had to set "Build and deployment" to "Deploy form a branch" (under Settings > Pages) and set the branch to `gh-pages` + `/ (root)`.
 
-## Custom domain
-
-Apart from mentioned `base_url` in the `config.toml`, you also need to add a `CNAME` file in the `static/` folder with the domain you want to use, e.g.:
-
-```bash
-$ cat static/CNAME
-apythonistalearningrust.com
-```
-
-Then under the repo's Settings > GitHub Pages, you can add the custom domain. You can also turn on HTTPS there.
-
-Lastly you need to update your DNS settings of your domain provider to point to GitHub's IP addresses, see [GitHub's docs](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
-
 ## Static files
 
 I did hit one issue when showing images in the post.
@@ -205,6 +192,30 @@ I thought this would work:
 Having the image in my `static/` folder, but it didn't show up on the live site.
 
 I played with the path making it relative and absolute, but in the end, I had to use the `image()` shortcode with the `src` attribute pointing to the image in the `static/` folder (just the file name, not the full path). See [theme docs](https://github.com/pawroman/zola-theme-terminimal?tab=readme-ov-file#shortcodes) as well.
+
+## Add pages
+
+This was a bit less straight-forward so I am adding it here as an extra. See [commit](https://github.com/bbelderbos/rust-blog/commit/29648aefb30b46a0dab7d110d833d65370c26964):
+
+- I created a `menu_items` array in the `config.toml` with the pages I wanted to add to the menu.
+- I created a `content/pages` folder and added a markdown file for each page using existing templates from the theme (about and archive).
+- I also made an `content/pages/_index.md`, I cannot 100% remember but I think it would not compile without it.
+- I could move the post entries to a new `content/posts` folder (and use the `content/posts/_index.md` to list the posts), but I decided to keep them in the root `content` folder for now.
+
+OK that seems easier than it was, but I had to try a few things to get it right. 😅
+
+## Add a custom domain
+
+Apart from mentioned `base_url` in the `config.toml`, you also need to add a `CNAME` file in the `static/` folder with the domain you want to use, e.g.:
+
+```bash
+$ cat static/CNAME
+apythonistalearningrust.com
+```
+
+Then under the repo's Settings > GitHub Pages, you can add the custom domain. You can also turn on HTTPS there.
+
+Lastly you need to update your DNS settings of your domain provider to point to GitHub's IP addresses, see [GitHub's docs](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
 
 ## Conclusion
 
