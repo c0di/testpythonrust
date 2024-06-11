@@ -117,7 +117,7 @@ fn main() -> io::Result<()> {
 
 I ended up using this script as part of another repo where I was working on mentioned Python exercises. I wanted to run this script in a GitHub Action to automatically generate the HTML files and upload them as an artifact.
 
-Here’s the GitHub Action workflow file:
+Here’s the GitHub Action workflow file ([repo link](https://github.com/bbelderbos/md_to_html)):
 
 ```yaml
 name: Build and Upload HTML Pages and Exercise Zip
