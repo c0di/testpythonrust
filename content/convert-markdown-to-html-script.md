@@ -111,7 +111,7 @@ fn main() -> io::Result<()> {
 - It then converts each markdown file to HTML using `pulldown-cmark`.
 - It creates an index page with links to each HTML file.
 - The HTML files and index page are saved in an `html_pages` directory.
-- The script uses `clap` for command-line argument parsing, which I showed in [my previous post](/).
+- The script uses `clap` for command-line argument parsing, which I showed in [my previous article](/command-line-apps-with-clap).
 
 ## Running the script in a GitHub Action
 
