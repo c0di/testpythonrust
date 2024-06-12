@@ -1,7 +1,6 @@
 +++
 title = "Converting markdown files to HTML in Rust"
 date = 2024-06-12
-draft = true
 +++
 
 In my journey of learning Rust, I decided to pick a small Python program that converts markdown files to html + makes an index page for those files, and rewrite it in Rust.
@@ -13,6 +12,8 @@ In this post, I’ll walk you through the script and how I run it in a GitHub Ac
 This is in the context of a new set of Python exercises I’m working on called Newbie Bites Part II. I wanted to convert the markdown files to HTML to make it easier to read and navigate for test users.
 
 ## The Rust script
+
+[Code repo](https://github.com/bbelderbos/md_to_html):
 
 ```rust
 use std::fs::{self, File};
@@ -117,7 +118,7 @@ fn main() -> io::Result<()> {
 
 I ended up using this script as part of another repo where I was working on mentioned Python exercises. I wanted to run this script in a GitHub Action to automatically generate the HTML files and upload them as an artifact.
 
-Here’s the GitHub Action workflow file ([repo link](https://github.com/bbelderbos/md_to_html)):
+Here’s the GitHub Action workflow file:
 
 ```yaml
 name: Build and Upload HTML Pages and Exercise Zip
@@ -170,11 +171,11 @@ jobs:
 
 There are some additional steps in the workflow file to zip up the exercises and combine them with the HTML files, but the main part is running the Rust script using `cargo run --release` after setting up the Rust toolchain.
 
-The script generates the HTML files and index page, which are then zipped up and uploaded as an artifact.
+The script generates the HTML files and index page, which are then zipped up and uploaded as [an _artifact_](https://docs.github.com/en/actions/using-workflows/storing-workflow-data-as-artifacts).
 
 ## Conclusion
 
-I enjoyed rewriting the Python script in Rust and running it in a GitHub Action. The Rust script is concise and easy to understand. I also learned about release builds in Rust and how they can improve performance:
+I enjoyed rewriting a Python script in Rust and running it in a GitHub Action. It taught me some good Rust pieces, like how to work with files and directories, and how to use external crates like `clap` and `pulldown-cmark`. I also learned about Rust's release build performance improvements:
 
 ```bash
 $ time cargo run -- --directory /Users/pybob/code/newbies-part2
@@ -188,8 +189,8 @@ $ time ./target/release/md_to_html --directory /Users/pybob/code/newbies-part2
 ./target/release/md_to_html --directory /Users/pybob/code/newbies-part2  0.00s user 0.01s system 79% cpu 0.020 total
 ```
 
-Although this is a small script, it taught me a lot about Rust. As I always say, the most you learn by building concrete things.
+As I always say, the most you learn by building concrete things and this exercise was no exception. 🎉
 
-And usually you learn a thing or two more than you expected, in this case I also learned about GitHub Actions, how to run Rust scripts in them, and how to generate and upload artifacts.
+And usually you learn a thing or two more as a bonus, in this case how to upload artifacts in a GitHub Action. 📈
 
-I hope this post was helpful if you’re looking to convert markdown files to HTML in Rust or run Rust scripts in a GitHub Action. Let me know if you have any questions or suggestions!
+I hope this post was helpful if you’re looking to convert markdown files to HTML in Rust + how to run Rust scripts in GitHub Actions. 🦀 💡
