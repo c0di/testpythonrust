@@ -3,7 +3,7 @@ title = "A Pythonista Learning Rust"
 description = "Documenting the journey of a Pythonista learning Rust with bite-sized posts."
 theme = "terminimal"
 compile_sass = true
-build_search_index = false
+build_search_index = true
 generate_feed = true
 feed_filename = "atom.xml"
 
@@ -11,6 +11,7 @@ feed_filename = "atom.xml"
 highlight_code = true
 
 [extra]
+default_language = "en"
 logo_text = "A Pythonista Learning Rust"
 logo_home_link = "/"
 author = "Bob Belderbos"
