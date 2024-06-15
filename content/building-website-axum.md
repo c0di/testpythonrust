@@ -5,6 +5,8 @@ date = 2024-06-14
 
 I managed to make a website using Axum, a web framework for Rust, pretty similar to Flask in its minimalistic approach. Although it's a basic site, I'm happy with the result, and I learned a lot in the process.
 
+{{ image(src="/artist-website.png", alt="result of the page I managed to build", style="border-radius: 8px;") }}
+
 In this post, I'll show you how I built a simple artist portfolio site using this framework.
 
 ## Setup
@@ -250,8 +252,6 @@ As mentioned before I also check each navigation item to see if it's the current
 ## Conclusion and next steps
 
 I managed to build a simple artist portfolio site using Axum, a web framework for Rust. It's still a basic site, but I'm happy with the result so far 🚀
-
-{{ image(src="/artist-website.png", alt="result of the page I managed to build", style="border-radius: 8px;") }}
 
 Of course I heavily used ChatGPT to get this working, but I learned so much faster this way, libraries like `Axum` and `Askama` make most sense when you start to use them in the context of a project.
 
