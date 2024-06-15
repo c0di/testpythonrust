@@ -28,19 +28,12 @@ post_view_navigation_prompt = "Thanks for reading! Reach out to me on X | Fossto
 # - "combined" -- combine like so: "page_title | main_title",
 #                 or if page_title is not defined or empty, fall back to `main_title`
 page_titles = "combined"
-
 menu_items = [
-    # each of these is optional, name and url are required
-    # $BASE_URL is going to be substituted by base_url from configuration
     {name = "Home", url = "$BASE_URL"},
-    # tags should only be enabled if you have "tags" taxonomy
-    # for later ...
-    # {name = "tags", url = "$BASE_URL/tags"},
     {name = "Archive", url = "$BASE_URL/pages/archive"},
+    {name = "Search", url = "$BASE_URL/pages/search"},
     {name = "About", url = "$BASE_URL/pages/about"},
     {name = "GitHub", url = "https://github.com/bbelderbos", newtab = true},
     {name = "Pybites", url = "https://pybit.es", newtab = true},
 ]
-
 exclude_from_feed = ["pages"]
-

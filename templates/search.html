@@ -1,0 +1,48 @@
+{% extends "index.html" %}
+
+{%- block title -%}
+  {{ title_macros::title(page_title=page.title, main_title=config.title) }}
+{%- endblock -%}
+
+{% block extra_head %}
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/elasticlunr.min.js"></script>
+    <script src="/search_index.en.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const idx = elasticlunr.Index.load(window.searchIndex);
+
+            document.getElementById('search').addEventListener('input', function() {
+                const query = this.value;
+                const results = idx.search(query, {
+                    fields: {
+                        title: {boost: 2},
+                        body: {boost: 1},
+                    },
+                    expand: true,
+                });
+
+                const resultsDiv = document.getElementById('search-results');
+                resultsDiv.innerHTML = '';
+
+                results.forEach(result => {
+                    const item = idx.documentStore.getDoc(result.ref);
+                    const element = document.createElement('div');
+                    element.className = 'search-result';
+                    element.innerHTML = `<a href="${item.id}">${item.title}</a>`;
+                    resultsDiv.appendChild(element);
+                });
+            });
+        });
+    </script>
+{% endblock extra_head %}
+
+{% block content %}
+    <div class="content">
+        <div class="searchContainer">
+            <input class="form-control" type="search"
+                   id="search" name="search" placeholder="Search posts...">
+            <div id="search-results" class="search-results"></div>
+        </div>
+    </div>
+{% endblock content %}
