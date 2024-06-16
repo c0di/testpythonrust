@@ -19,4 +19,5 @@ date = ${date}
 
 EOL
 
-echo "New post created at $file_path"
+echo "New post created at $file_path, opening in vim..."
+vim $file_path
