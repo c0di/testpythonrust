@@ -10,6 +10,8 @@ As a software developer, I have worked on a variety of projects ranging from web
 
 But I always like to look further and be challenged, which means don't get too comfortable and keep learning new things. 🚀📚
 
+{{ image(src="/images/python-rust.png", alt="learning rust as python developer (not the official logo yet lol)", style="border-radius: 8px; float: right; padding: 10px; border: 1px solid #999; margin: 10px 0 10px 20px;") }}
+
 So I decided to pick up Rust in June 2024, a language that was on my radar for a while. I have been hearing a lot of good things about Rust and I am excited about how it's increasingly used in the Python ecosystem (e.g. Pydantic and ruff). 🦀✨
 
 As we often say @ Pybites: the best way to learn is A. build complete projects end-to-end in your target language, and B. teach what you learn. Hence the blog which forces me to do both. 📝🔍
