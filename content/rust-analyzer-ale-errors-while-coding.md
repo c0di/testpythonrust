@@ -88,8 +88,6 @@ autocmd FileType loclist setlocal wrap linebreak
 let g:ale_detail_to_floating_preview = 1
 ```
 
-Specially the _quickfix_ list is useful when errors are not fully visible in the editor window. It also keeps them all in one place so it's easier to see them all at once.
-
 ## See it in action
 
 Here is some code to try this on:
@@ -142,7 +140,11 @@ E async fn main() { // E: `main` function is not allowed to be `async` `main` fu
 E fn main() { // E: the `async` keyword is missing from the function declaration
 ```
 
-It also works well in Python 😎 🎉
+Specially the `ale_open_list` and `ale_set_quickfix` settings are useful. The quickfix panel shows all the errors in a separate window, which is useful when you have mulitple errors that wrap in the editor window. For example:
+
+{{ image(src="/images/example-ale-errors-pane.png", alt="Example of ALE errors pane", style="border-radius: 8px;") }}
+
+And it also works for Python 😎 🎉
 
 ```python
 ...
