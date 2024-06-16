@@ -204,6 +204,26 @@ This was a bit less straight-forward so I am adding it here as an extra. See [co
 
 OK that seems easier than it was, but I had to try a few things to get it right. 😅
 
+## Add search
+
+You can enable search in the theme by setting `build_search_index = true` in the `config.toml`. This will generate `search_index.json` and `elasticlunr.min.js` files in the `public` folder upon build.
+
+`elasticlunr.js` is a lightweight full-text search engine in JavaScript for browser search. The search index is generated from the content of the site upon build, the index is stored in mentioned `search_index.json` file.
+
+[Here](https://github.com/bbelderbos/rust-blog/commit/304d708a9454ad5d9bf43e58387803e5594c0f86) is the commit I made to get search working on this site:
+
+- I created a `templates/search.html` file with the search form and results.
+
+- It contains the necessary JavaScript to make this work. First we define an `idx` constant: `const idx = elasticlunr.Index.load(window.searchIndex);` which we can then use to search the index (`idx.search(query)`). It returns an array of search results which we then render in the DOM.
+
+- I added some CSS to style the search results and added the page to the navigation menu with `{name = "Search", url = "$BASE_URL/pages/search"},` in the `config.toml`.
+
+{{ image(src="/images/search-example1.png", alt="doing a search on this website",
+         style="border-radius: 8px;") }}
+
+{{ image(src="/images/search-example2.png", alt="another search",
+         style="border-radius: 8px;") }}
+
 ## Add a custom domain
 
 Apart from mentioned `base_url` in the `config.toml`, you also need to add a `CNAME` file in the `static/` folder with the domain you want to use, e.g.:

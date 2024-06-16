@@ -5,7 +5,7 @@ date = 2024-06-14
 
 I managed to make a website using Axum, a web framework for Rust, pretty similar to Flask in its minimalistic approach. Although it's a basic site, I'm happy with the result, and I learned a lot in the process.
 
-{{ image(src="/artist-website.png", alt="result of the page I managed to build", style="border-radius: 8px;") }}
+{{ image(src="/images/artist-website.png", alt="result of the page I managed to build", style="border-radius: 8px;") }}
 
 In this post, I'll show you how I built a simple artist portfolio site using this framework.
 
