@@ -45,7 +45,7 @@ Code so far [here](https://github.com/bbelderbos/cli_alarm).
 
 A couple of cool things I learned while building this:
 
-- I used the [clap](https://crates.io/crates/clap) crate for the first time. It's a great library for building command line interfaces, see also [my article](/command-line-apps-with-clap).
+- I used [clap](https://crates.io/crates/clap)  again for the CLI, great library, see also [this article](/command-line-apps-with-clap).
 
 Like last time I am using attributes (derive macros) to define the CLI interface which is pretty concise:
 
