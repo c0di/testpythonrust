@@ -20,6 +20,22 @@ Expect practical content with a focus on _learning by doing_, understanding thin
 
 Who knows what will come from it ... I might end up writing more Rust than Python, or I might end up writing more Python with a different perspective. Regardless, I am sure that learning a compiled (and no garbage collection) language like Rust will make me a better programmer! 🧑‍💻💡
 
+```bash
+$ fsays 'I am learning some Rust today!'
+
+ ________________________________
+< I am learning some Rust today! >
+ --------------------------------
+        \
+         \
+            _~^~^~_
+        \) /  o o  \ (/
+          '_   -   _'
+          / '-----' \
+```
+
+(I installed `fsay` with `cargo install fsay` 😄)
+
 ---
 You can reach out to me on [X](https://twitter.com/bbelderbos), [Fosstodon](https://fosstodon.org/@bbelderbos), and [LinkedIn](https://www.linkedin.com/in/bbelderbos/).
 
