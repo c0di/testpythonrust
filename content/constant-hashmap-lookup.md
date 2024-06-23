@@ -1,7 +1,6 @@
 +++
 title = "Making an immutable hashmap constant"
-date = 2024-06-24
-draft = true
+date = 2024-06-23
 +++
 
 The other day I needed an dictionary / HashMap to look up [abbreviated content types](https://github.com/bbelderbos/pybites-search/issues/5).
