@@ -7,6 +7,8 @@ I tweaked [my alarm clock app](/play-alarm-from-command-line) today to add text-
 
 I started with the obvious choice: [tts crate](https://crates.io/crates/tts), but it did not work on my Mac, no audio.
 
+## Adding text-to-speech
+
 So I got a bit creative and ended up with this function:
 
 ```rust
@@ -44,6 +46,8 @@ pub fn speak_message(message: &str) -> Result<(), Box<dyn std::error::Error>> {
 
 - The return type is `Result<(), Box<dyn std::error::Error>>` to indicate that the function can return an error. The `Box<dyn std::error::Error>` is a trait object that can hold any type that implements the `Error` trait. I am seeing this pattern quite a bit in Rust code.
 
+## New command-line arguments
+
 The message to speak is a new (Clap) command-line argument:
 
 ```rust
@@ -77,6 +81,8 @@ for _ in 0..args.times {
 The nice thing about `usize` (and typing in general) is that it excludes invalid options.
 
 For example, if the user enters a negative number, the program will not compile. The `usize` type is an unsigned integer, meaning that it cannot be negative.
+
+## Ranges in Rust (vs Python)
 
 The `0..N` construct is similar to `range` in Python, where the upper bound is also exclusive. Also in both languages, the lower bound is inclusive. To make the upper bound inclusive, you can use `0..=N` in Rust. So I could also write `1..=args.times` to play the message `args.times` times.
 
