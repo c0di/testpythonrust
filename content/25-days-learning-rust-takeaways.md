@@ -1,6 +1,6 @@
 +++
 title = "25 days of learning Rust: what worked + takeaways"
-date = 2024-06-25
+date = 2024-06-26
 +++
 
 I have been having a blast learning Rust, now 25 days in a row! 🎉
@@ -22,8 +22,6 @@ It's like having a dedicated research assistant and is much faster than googling
 ### 3. Blog about your journey
 
 Blogging forces you to understand concepts more thoroughly and share your insights. The first strategy ensures you always have content to talk about, and using AI tools, like ChatGPT for research and Co-pilot for writing, you can do this faster and better.
-
-And I have been consistent: 25 days in, 25 posts on this blog. 🎉
 
 Additionally, blogging regularly forces you to put content out there, which also helps with the impostor syndrome that often comes with learning something new. 💡
 

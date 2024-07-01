@@ -107,8 +107,8 @@ File uploaded successfully to example-bucket/cat.png
 
 ## Conclusion
 
-And that's it, a Rust utitlity to upload files to S3. 🦀 🚀
+And that's it, a Rust utitlity to upload files to S3. 🚀
 
 I extended the program a bit to allow multiple files to be uploaded and list the images, including with pagination so I can use it later with HTMX' infinite scroll. I will write about that in a future post ...
 
-The repo is [here](https://github.com/bbelderbos/s3_file_manager), I also pushed it to crates.io so you can install it with `cargo install s3_file_manager`. In a next post I will refactor the code to make it more modular so that it can be used as a library as well. Stay tuned! 🚀🦀
+The repo is [here](https://github.com/bbelderbos/s3_file_manager) and I pushed it to crates.io as well. 🦀
