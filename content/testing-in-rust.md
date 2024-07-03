@@ -167,10 +167,10 @@ You can write integration tests in a `tests` directory, I will show here when I 
 
 ## Conclusion
 
-`#[cfg(test)]` is a conditional compilation attribute that tells the compiler to only compile the module when running tests.
+The `#[cfg(test)]` attribute is a conditional compilation attribute that instructs the Rust compiler to only compile the annotated module when running tests.
 
-Inside that module, you can use the `#[test]` attribute to mark a function as a test and use the `assert_eq!` macro to check if two values are equal.
+Within this module, the `#[test]` attribute is used to mark functions as tests, and the `assert_eq!` macro is employed to check if two values are equal.
 
-It seems common to bundle your (unit)tests into the same module as the code you are testing. Integration tests are put inside a dedicated module in a `tests` directory.
+It is common practice to bundle unit tests within the same module as the code being tested. Integration tests, however, are typically placed in a dedicated module within the `tests` directory.
 
-There is no `parametrize` feature in Rust like in pytest, so I just bundled my tests into a couple of functions to give more naming and targeting options.
+Rust does not have a built-in `parametrize` feature like pytest. To manage multiple test cases, you can either write individual test functions for each case or group similar tests within a few functions to improve naming and targeting options.
