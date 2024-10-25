@@ -1,4 +1,4 @@
-base_url = "https://apythonistalearningrust.com"
+base_url = "c0di.github.io"
 title = "A Pythonista Learning Rust"
 description = "Documenting the journey of a Pythonista learning Rust with bite-sized posts."
 theme = "terminimal"
