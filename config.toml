@@ -4,8 +4,8 @@ description = "Documenting the journey of a Pythonista learning Rust with bite-s
 theme = "terminimal"
 compile_sass = true
 build_search_index = true
-generate_feed = true
-feed_filename = "atom.xml"
+#generate_feed = true
+#feed_filename = "atom.xml"
 
 [markdown]
 highlight_code = true
