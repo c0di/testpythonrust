@@ -14,5 +14,4 @@ Cargo.lock
 *.pdb
 
 # Ignore the public directory where Zola builds the site
-public
 .DS_Store
